@@ -1,0 +1,153 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "nurazizahW",
+  "password" : "rahasia",
+  "name" : "Nuraziizah Zahra"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "nurazizahW",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+{
+  "name" : "Zahr-WWWa"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 55cc14f9-23c7-4aaa-a7b9-2949af391453
+
+###
+
+POST http://localhost:3000/api/mahasiswa
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+{
+  "nim" : "20220040023",
+  "email" : "nur.zahra_ti22@nusaputra.ac.id",
+  "ttl" : "Sukabumi",
+  "tahun_masuk" : "2022",
+  "jenis_kelamin" : "perempuan"
+}
+
+###
+
+GET http://localhost:3000/api/mahasiswa
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+###
+
+GET http://localhost:3000/api/mahasiswa/6
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+### Update
+
+PUT http://localhost:3000/api/mahasiswa/6
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+{
+  "nim" : "20220040023555",
+  "email" : "zahra@gmail.com",
+  "ttl" : "Sukabumi",
+  "tahun_masuk" : "2022",
+  "jenis_kelamin" : "Perempuan"
+}
+
+
+### Delete 
+
+DELETE http://localhost:3000/api/mahasiswa/6
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+### Create Address
+
+POST http://localhost:3000/api/mahasiswa/5/matkul
+Content-Type: application/json
+Accept: application/json
+Authorization: f8072f4e-87d4-4e59-bd32-29c75b65a45c
+
+{
+  "kode" : "A003",
+  "nama" : "Algoritma",
+  "sks" : "3",
+  "semester" : "3",
+  "dosen" : "Anggun Fergina M.Kom",
+  "ruangan" : "B4C"
+}
+
+
+### List matkul
+
+GET http://localhost:3000/api/mahasiswa/5/matkul
+Content-Type: application/json
+Accept: application/json
+Authorization: 55cc14f9-23c7-4aaa-a7b9-2949af391453
+
+
+### Get ### List matkul
+
+
+GET http://localhost:3000/api/mahasiswa/5/matkul/5
+Content-Type: application/json
+Accept: application/json
+Authorization: 55cc14f9-23c7-4aaa-a7b9-2949af391453
+
+### Update matkul
+
+PUT http://localhost:3000/api/mahasiswa/5/matkul/5
+Content-Type: application/json
+Accept: application/json
+Authorization: 55cc14f9-23c7-4aaa-a7b9-2949af391453
+
+{
+  "kode" : "A003",
+  "nama" : "Statistika",
+  "sks" : "2",
+  "semester" : "3",
+  "dosen" : "Imam Sanjaya M.Kom",
+  "ruangan" : "B4B"
+}
+
+### Remove Matkul
+
+DELETE http://localhost:3000/api/mahasiswa/5/matkul/5
+Content-Type: application/json
+Accept: application/json
+Authorization: 55cc14f9-23c7-4aaa-a7b9-2949af391453
